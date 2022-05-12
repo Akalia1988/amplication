@@ -17,10 +17,10 @@ import { CustomerList } from "./customer/CustomerList";
 import { CustomerCreate } from "./customer/CustomerCreate";
 import { CustomerEdit } from "./customer/CustomerEdit";
 import { CustomerShow } from "./customer/CustomerShow";
-import { WisdomorgnizerList } from "./wisdomorgnizer/WisdomorgnizerList";
-import { WisdomorgnizerCreate } from "./wisdomorgnizer/WisdomorgnizerCreate";
-import { WisdomorgnizerEdit } from "./wisdomorgnizer/WisdomorgnizerEdit";
-import { WisdomorgnizerShow } from "./wisdomorgnizer/WisdomorgnizerShow";
+import { AddressList } from "./address/AddressList";
+import { AddressCreate } from "./address/AddressCreate";
+import { AddressEdit } from "./address/AddressEdit";
+import { AddressShow } from "./address/AddressShow";
 import { ProductList } from "./product/ProductList";
 import { ProductCreate } from "./product/ProductCreate";
 import { ProductEdit } from "./product/ProductEdit";
@@ -44,7 +44,7 @@ const App = (): React.ReactElement => {
   return (
     <div className="App">
       <Admin
-        title={"Sample app"}
+        title={"Sample app-1"}
         dataProvider={dataProvider}
         authProvider={jwtAuthProvider}
         theme={theme}
@@ -73,11 +73,11 @@ const App = (): React.ReactElement => {
           show={CustomerShow}
         />
         <Resource
-          name="Wisdomorgnizer"
-          list={WisdomorgnizerList}
-          edit={WisdomorgnizerEdit}
-          create={WisdomorgnizerCreate}
-          show={WisdomorgnizerShow}
+          name="Address"
+          list={AddressList}
+          edit={AddressEdit}
+          create={AddressCreate}
+          show={AddressShow}
         />
         <Resource
           name="Product"

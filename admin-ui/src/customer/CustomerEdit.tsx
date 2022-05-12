@@ -11,19 +11,15 @@ import {
   SelectArrayInput,
 } from "react-admin";
 
-import { WisdomorgnizerTitle } from "../wisdomorgnizer/WisdomorgnizerTitle";
+import { AddressTitle } from "../address/AddressTitle";
 import { OrderTitle } from "../order/OrderTitle";
 
 export const CustomerEdit = (props: EditProps): React.ReactElement => {
   return (
     <Edit {...props}>
       <SimpleForm>
-        <ReferenceInput
-          source="wisdomorgnizer.id"
-          reference="Wisdomorgnizer"
-          label="Address"
-        >
-          <SelectInput optionText={WisdomorgnizerTitle} />
+        <ReferenceInput source="address.id" reference="Address" label="Address">
+          <SelectInput optionText={AddressTitle} />
         </ReferenceInput>
         <TextInput label="Email" source="email" type="email" />
         <TextInput label="First Name" source="firstName" />
