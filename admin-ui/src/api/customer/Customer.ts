@@ -1,8 +1,8 @@
-import { Wisdomorgnizer } from "../wisdomorgnizer/Wisdomorgnizer";
+import { Address } from "../address/Address";
 import { Order } from "../order/Order";
 
 export type Customer = {
-  address?: Wisdomorgnizer | null;
+  address?: Address | null;
   createdAt: Date;
   email: string | null;
   firstName: string | null;

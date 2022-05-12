@@ -27,7 +27,7 @@ import { CustomerFindUniqueArgs } from "./CustomerFindUniqueArgs";
 import { Customer } from "./Customer";
 import { OrderFindManyArgs } from "../../order/base/OrderFindManyArgs";
 import { Order } from "../../order/base/Order";
-import { Wisdomorgnizer } from "../../wisdomorgnizer/base/Wisdomorgnizer";
+import { Address } from "../../address/base/Address";
 import { CustomerService } from "../customer.service";
 
 @graphql.Resolver(() => Customer)
@@ -186,15 +186,13 @@ export class CustomerResolverBase {
   }
 
   @common.UseInterceptors(AclFilterResponseInterceptor)
-  @graphql.ResolveField(() => Wisdomorgnizer, { nullable: true })
+  @graphql.ResolveField(() => Address, { nullable: true })
   @nestAccessControl.UseRoles({
-    resource: "Wisdomorgnizer",
+    resource: "Address",
     action: "read",
     possession: "any",
   })
-  async address(
-    @graphql.Parent() parent: Customer
-  ): Promise<Wisdomorgnizer | null> {
+  async address(@graphql.Parent() parent: Customer): Promise<Address | null> {
     const result = await this.service.getAddress(parent.id);
 
     if (!result) {

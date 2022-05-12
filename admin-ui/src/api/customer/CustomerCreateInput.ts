@@ -1,8 +1,8 @@
-import { WisdomorgnizerWhereUniqueInput } from "../wisdomorgnizer/WisdomorgnizerWhereUniqueInput";
+import { AddressWhereUniqueInput } from "../address/AddressWhereUniqueInput";
 import { OrderCreateNestedManyWithoutCustomersInput } from "./OrderCreateNestedManyWithoutCustomersInput";
 
 export type CustomerCreateInput = {
-  address?: WisdomorgnizerWhereUniqueInput | null;
+  address?: AddressWhereUniqueInput | null;
   email?: string | null;
   firstName?: string | null;
   lastName?: string | null;

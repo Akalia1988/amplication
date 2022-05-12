@@ -11,7 +11,7 @@ https://docs.amplication.com/docs/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { WisdomorgnizerWhereUniqueInput } from "../../wisdomorgnizer/base/WisdomorgnizerWhereUniqueInput";
+import { AddressWhereUniqueInput } from "../../address/base/AddressWhereUniqueInput";
 import { ValidateNested, IsOptional, IsString } from "class-validator";
 import { Type } from "class-transformer";
 import { OrderCreateNestedManyWithoutCustomersInput } from "./OrderCreateNestedManyWithoutCustomersInput";
@@ -19,15 +19,15 @@ import { OrderCreateNestedManyWithoutCustomersInput } from "./OrderCreateNestedM
 class CustomerCreateInput {
   @ApiProperty({
     required: false,
-    type: () => WisdomorgnizerWhereUniqueInput,
+    type: () => AddressWhereUniqueInput,
   })
   @ValidateNested()
-  @Type(() => WisdomorgnizerWhereUniqueInput)
+  @Type(() => AddressWhereUniqueInput)
   @IsOptional()
-  @Field(() => WisdomorgnizerWhereUniqueInput, {
+  @Field(() => AddressWhereUniqueInput, {
     nullable: true,
   })
-  address?: WisdomorgnizerWhereUniqueInput | null;
+  address?: AddressWhereUniqueInput | null;
 
   @ApiProperty({
     required: false,

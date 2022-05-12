@@ -91,31 +91,31 @@
   },
   {
     "role": "user",
-    "resource": "Wisdomorgnizer",
+    "resource": "Address",
     "action": "read:own",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Wisdomorgnizer",
+    "resource": "Address",
     "action": "create:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Wisdomorgnizer",
+    "resource": "Address",
     "action": "update:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Wisdomorgnizer",
+    "resource": "Address",
     "action": "delete:any",
     "attributes": "*"
   },
   {
     "role": "user",
-    "resource": "Wisdomorgnizer",
+    "resource": "Address",
     "action": "read:any",
     "attributes": "*"
   },
